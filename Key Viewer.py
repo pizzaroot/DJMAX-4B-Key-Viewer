@@ -33,44 +33,44 @@ velocity = float(open('velocity.txt', 'r').read())
 def keydown(i):
     if mode == 8:
         for j in range(8):
-            if i.name == keymap8[j] and state8[j] == False:
+            if i.name.lower() == keymap8[j] and state8[j] == False:
                 state8[j] = True
                 events8[j].append(i.time)
     if mode == 4:
         for j in range(4):
-            if i.name == keymap4[j] and state4[j] == False:
+            if i.name.lower() == keymap4[j] and state4[j] == False:
                 state4[j] = True
                 events4[j].append(i.time)
     if mode == 6:
         for j in range(6):
-            if i.name == keymap6[j] and state6[j] == False:
+            if i.name.lower() == keymap6[j] and state6[j] == False:
                 state6[j] = True
                 events6[j].append(i.time)
     if mode == 5:
         for j in range(6):
-            if i.name == keymap5[j] and state5[j] == False:
+            if i.name.lower() == keymap5[j] and state5[j] == False:
                 state5[j] = True
                 events5[j].append(i.time)
 
 def keyup(i):
     if mode == 8:
         for j in range(8):
-            if i.name == keymap8[j]:
+            if i.name.lower() == keymap8[j]:
                 state8[j] = False
                 events8[j].append(i.time)
     if mode == 4:
         for j in range(4):
-            if i.name == keymap4[j]:
+            if i.name.lower() == keymap4[j]:
                 state4[j] = False
                 events4[j].append(i.time)
     if mode == 5:
         for j in range(6):
-            if i.name == keymap5[j]:
+            if i.name.lower() == keymap5[j]:
                 state5[j] = False
                 events5[j].append(i.time)
     if mode == 6:
         for j in range(6):
-            if i.name == keymap6[j]:
+            if i.name.lower() == keymap6[j]:
                 state6[j] = False
                 events6[j].append(i.time)
 
